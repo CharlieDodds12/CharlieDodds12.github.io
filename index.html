@@ -1,10 +1,113 @@
 <!DOCTYPE html>
+<meta name='viewport' content='width=device-width, initial-scale=1' /> 
 <html>
+    <link rel="stylesheet" href="webcss.css">
     <head>
         <title>index.html</title>
     </head>
     <body>
         <h1>Charlie Dodds</h1>
-        <p>Short description</p>
+        <div style="text-align:center;">
+        <img style="width:20%" alt="photo of myself" src="https://i.ibb.co/h1XxTxYB/Screenshot-2026-03-24-140226.png"/>
+        </div>
+        <p>Primarily an artist and character designer, I love visually bringing to life stories and characters I bond with and hope others like them as much as I do! I hope to bring this into creating videogames and other creative projects.</p>
+        <p><a href="#bio">Biography</a> ** <a href="#art">Artifacts</a></p>
+
+        <h1 id="#bio">Biography</h1>
+        <p>Primarily an artist and character designer, I love visually bringing to life stories and characters I bond with and hope others like them as much as I do! I hope to bring this into creating videogames and other creative projects.</p>
+
+        <h1 id="#art">Artifacts</h1>
+        <p>Character design</p>
+        
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/117251056_4ZHMeNdcEPEE1Wl.png" style="width:100%">
+            <div class="text">Dungeons and Dragons Owlin Warlock</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/117250927_1pqtc82gHtK5QD2.png" style="width:100%">
+            <div class="text">Personal design of Qingtong from novel White Cat's Divine Scratching Post</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/117251474_ZSO9TdmqYH60RHZ.png" style="width:100%">
+            <div class="text">Personal character</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+
+    <!-- Slideshow end -->
+
+    <p>General art</p>
+
+    <div class="row">
+    <div class="column">
+        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/117252635_QiLvNmZ2NaXewB2.jpg" style="width:100%">
+    </div>
+    <div class="column">
+        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/117252650_lTNXAiGNRgt9dOW.jpg" style="width:100%">
+    </div>
+    <div class="column">
+        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/117252661_LCzqiXcySsI4dGE.png" style="width:100%">
+    </div>
+    </div>
+   
+
+    <p>Animations</p>
+    <iframe width="420" height="315" src="https://www.youtube.com/watch?v=1mxZFFYkK9E"></iframe>
+    <br>
+    <iframe width="420" height="315" src="https://www.youtube.com/watch?v=ltxi6r1MhuI"></iframe>
+
+    <p>Games</p>
+    <iframe width="420" height="315" src="https://www.youtube.com/watch?v=8UlXguV3l14"></iframe>
+
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    }
+    </script>
+        
     </body>
 </html>
